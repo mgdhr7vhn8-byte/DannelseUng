@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Ny side</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* --- TOPBJÆLKE (SAMME SOM DE ANDRE SIDER) --- */
+        .topbar {
+            width: 100%;
+            padding: 22px 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            z-index: 999999999999999999;
+
+            background: linear-gradient(
+                135deg,
+                rgba(0, 55, 95, 0.65),
+                rgba(0, 110, 150, 0.55),
+                rgba(0, 160, 210, 0.45)
+            );
+            backdrop-filter: blur(26px) saturate(220%);
+            -webkit-backdrop-filter: blur(26px) saturate(220%);
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 40px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.55);
+            box-shadow:
+                0 12px 40px rgba(0,0,0,0.35),
+                inset 0 1px 0 rgba(255,255,255,0.95),
+                inset 0 -3px 12px rgba(255,255,255,0.25);
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: linear-gradient(
+                135deg,
+                rgba(255,255,255,0.40),
+                rgba(210,240,255,0.30)
+            );
+            color: white;
+            padding: 14px 36px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 14px;
+            backdrop-filter: blur(12px);
+            transition: 0.25s ease;
+            letter-spacing: 0.7px;
+            font-weight: 600;
+            box-shadow:
+                0 5px 16px rgba(0,0,0,0.25),
+                inset 0 1px 0 rgba(255,255,255,0.7);
+        }
+
+        .dropbtn:hover {
+            background: rgba(255,255,255,0.6);
+            box-shadow:
+                0 10px 26px rgba(0,0,0,0.35),
+                inset 0 1px 0 rgba(255,255,255,1);
+            transform: translateY(-2px);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+
+            background: linear-gradient(
+                135deg,
+                rgba(0, 55, 95, 0.65),
+                rgba(0, 110, 150, 0.55),
+                rgba(0, 160, 210, 0.45)
+            );
+            backdrop-filter: blur(22px) saturate(220%);
+            min-width: 240px;
+
+            border-radius: 14px;
+            overflow: hidden;
+
+            box-shadow:
+                0 14px 40px rgba(0,0,0,0.35),
+                inset 0 1px 0 rgba(255,255,255,0.8),
+                inset 0 -2px 10px rgba(255,255,255,0.25);
+
+            border: 1px solid rgba(255,255,255,0.55);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 16px 22px;
+            text-decoration: none;
+            display: block;
+            font-size: 17px;
+            transition: 0.2s ease;
+            font-weight: 500;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(255,255,255,0.18);
+            backdrop-filter: blur(30px);
+        }
+
+        /* --- BASIC INDHOLD OMRÅDE --- */
+        .content {
+            padding: 140px 60px 60px;
+            font-size: 22px;
+            color: #003344;
+        }
+
+        /* --- FOOTER (SAMME SOM DE ANDRE SIDER) --- */
+        .footer {
+            width: 100%;
+            background: #003344;
+            color: white;
+            padding: 40px 60px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 60px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- TOPMENU -->
+    <div class="topbar">
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                       <a href="index.html">Forside</a>
+                <a href="Om os.html">Om os</a>
+                <a href="efterskole.html">Efterskole</a>
+                <a href="udveksling.html">Udveksling</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="indstillinger.html">Indstillinger</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BASIC INDHOLD -->
+    <div class="content">
+        <h1>Ny side</h1>
+        <p>Her kan du skrive dit indhold.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <strong>Adresse:</strong> Eksempelvej 12, 8362 Hørning<br>
+        <strong>Email:</strong> kontakt@aadalen.dk<br>
+        <strong>Telefon:</strong> +45 12 34 56 78<br>
+        © 2026 Ådalen – Alle rettigheder forbeholdes
+    </div>
+
+</body>
+</html>
